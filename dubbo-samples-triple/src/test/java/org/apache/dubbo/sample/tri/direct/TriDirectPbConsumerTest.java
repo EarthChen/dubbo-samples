@@ -20,6 +20,7 @@ public class TriDirectPbConsumerTest extends BasePbConsumerTest {
         ref.setUrl(TriSampleConstants.DEFAULT_ADDRESS);
         ref.setProtocol(CommonConstants.TRIPLE);
         ref.setLazy(true);
+        ref.setRetries(0);
         ref.setTimeout(3000);
 
         ReferenceConfig<PbGreeterManual> ref2 = new ReferenceConfig<>();
@@ -28,6 +29,7 @@ public class TriDirectPbConsumerTest extends BasePbConsumerTest {
         ref2.setUrl(TriSampleConstants.DEFAULT_MULTI_ADDRESS);
         ref2.setProtocol(CommonConstants.TRIPLE);
         ref2.setLazy(true);
+        ref.setRetries(0);
         ref2.setTimeout(3000);
 
         DubboBootstrap bootstrap = DubboBootstrap.getInstance();

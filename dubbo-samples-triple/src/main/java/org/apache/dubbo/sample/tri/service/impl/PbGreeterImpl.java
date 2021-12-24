@@ -162,6 +162,11 @@ public class PbGreeterImpl implements PbGreeter, PbGreeterManual {
 
     @Override
     public GreeterReply greet(GreeterRequest request) {
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return GreeterReply.newBuilder()
                 .setMessage(request.getName())
                 .build();

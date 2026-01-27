@@ -37,10 +37,11 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <dubbo.version>3.3.1</dubbo.version>
+        <dubbo.version>3.3.7-SNAPSHOT</dubbo.version>
         <spring-boot.version>3.2.3</spring-boot.version>
-        <protoc.version>3.22.2</protoc.version>
-        <protobuf-java.version>3.19.6</protobuf-java.version>
+        <!-- protoc version should be same with protobuf-java version -->
+        <protoc.version>4.33.4</protoc.version>
+        <protobuf-java.version>4.33.4</protobuf-java.version>
         <log4j2.version>2.20.0</log4j2.version>
 
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
@@ -114,14 +115,15 @@
         <version>6.1.5</version>
         <scope>test</scope>
       </dependency>
-        <dependency>
-            <groupId>com.google.protobuf</groupId>
-            <artifactId>protobuf-java</artifactId>
-        </dependency>
-        <dependency>
-          <groupId>org.apache.dubbo</groupId>
-          <artifactId>dubbo-zookeeper-curator5-spring-boot-starter</artifactId>
-        </dependency>
+      <dependency>
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-java</artifactId>
+        <version>${protobuf-java.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.dubbo</groupId>
+        <artifactId>dubbo-zookeeper-curator5-spring-boot-starter</artifactId>
+      </dependency>
     </dependencies>
 
     <build>
